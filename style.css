@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100%;
+    background: linear-gradient(to top,rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(1.jpg);
+    background-position: center;
+    background-size:cover;
+    height: 150dvh;
+}
+
+.icon{
+    width :200px;
+    float:left;
+    height: 70px;
+}
+
+.logo{
+    color:goldenrod;
+    font-size: 30px;
+    font-family: cursive;
+    padding-left: 10px;
+}
+
+.menu{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    float: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style-type: none;
+    margin-left: 50px;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 18px;
+
+}
+
+ul li a{
+    text-decoration: none;
+    color:#fff;
+    font-family: Georgia;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover {
+    color:chocolate;
+}
+
+.search{
+    width: 400px;
+    float:right;
+    margin-left:  400px;
+   
+}
+
+.content{
+    width:1200px;
+    height:auto;
+    font-family: 'Lucida Sans';
+    color:#fff ;
+    position: relative;
+
+}
+
+.content .para{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height:30px;
+}
+
+.content h1{
+    font-family: 'Scriptina';
+    font-size: 50px;
+    padding-left: 20px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+}
+
+.content .cn{
+    width: 100px;
+    height: 40px;
+    background:grey;
+
+}
+
+.content .cn a{
+    text-decoration: none;
+    color: #000 ;
+    transition: .3s ease;
+
+}
+
+.cn:hover{
+    background: #fff;
+}
+
+content span{
+    color: FF6000 ;
+}
+
+.cn1{
+    width: 100px;
+    height: 40px;
+    background:grey;
+
+}
+
+.cn1{
+    text-decoration: none;
+    color: #000 ;
+    transition: .3s ease;
+
+}
+
+.form{
+    width:250px;
+    height : 380px;
+    background : linear-gradient(to top,rgba(0,0,0,0,0.8));
+    position : absolute;
+    top: -20px;
+    left: 870px;
+    border-radius: 10px;
+    padding: 25px;
+
+    
+}
+
+.form h2{
+    width: 220px;
+    font-size: sans-serif;
+    text-align: center;
+    color:cornflowerblue ;
+    font-size: 22px;
+    background: #fff;
+    margin:2px;
+    padding:8px;
+}
+.form input{
+    width:240px;
+    height: 35px;
+   
+    border-radius:18px;
+    margin:2px;
+    padding : 8px;
+
+}
+
+.form input{
+    width: 240px;
+    height: 35px;
+   
+}

@@ -1,0 +1,431 @@
+Write the syntax of function in js 
+Sure! Here's an example of a JavaScript function syntax:
+
+javascript
+Copy code
+function functionName(parameter1, parameter2) {
+  // Function body - contains code to be executed
+  // ...
+  // ...
+  return result; // Optional - specifies the value to be returned
+}
+In the above example:
+
+functionName is the name of the function, which can be any valid JavaScript identifier.
+parameter1 and parameter2 are the parameters that the function accepts. Parameters are optional, and you can have zero or more parameters separated by commas.
+function body is where you write the actual code that gets executed when the function is called. It can contain any valid JavaScript statements.
+return statement is optional and is used to specify the value that the function should return when it is called. If no return statement is provided, the function returns undefined by default.
+Here's an example of a function that calculates the sum of two numbers:
+
+javascript
+Copy code
+function addNumbers(a, b) {
+  let sum = a + b; // Function body - adds a and b
+  return sum; // Returns the sum
+}
+You can call the above function by passing two numbers as arguments and storing the result in a variable, like this:
+
+javascript
+Copy code
+let result = addNumbers(5, 10); // Calls the function with arguments 5 and 10
+console.log(result); // Outputs 15
+Note: JavaScript functions are first-class objects, which means you can store them in variables, pass them as arguments to other functions, and even return them from other functions.
+
+
+
+
+gadeelaajaykumar
+Write the 10 conditions using functions in js
+Sure! Here are 10 example conditions that can be implemented using JavaScript functions:
+
+Checking if a number is even or odd:
+javascript
+Copy code
+function isEvenOrOdd(number) {
+  if (number % 2 === 0) {
+    return "Even";
+  } else {
+    return "Odd";
+  }
+}
+
+console.log(isEvenOrOdd(5)); // Outputs "Odd"
+Checking if a string is empty or not:
+javascript
+Copy code
+function isEmptyString(str) {
+  if (str === "") {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isEmptyString("")); // Outputs true
+Checking if a value is null or undefined:
+javascript
+Copy code
+function isNullOrUndefined(value) {
+  if (value === null || value === undefined) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isNullOrUndefined(null)); // Outputs true
+Checking if an array is empty or not:
+javascript
+Copy code
+function isEmptyArray(arr) {
+  if (arr.length === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isEmptyArray([])); // Outputs true
+Checking if a number is positive, negative, or zero:
+javascript
+Copy code
+function getNumberSign(number) {
+  if (number > 0) {
+    return "Positive";
+  } else if (number < 0) {
+    return "Negative";
+  } else {
+    return "Zero";
+  }
+}
+
+console.log(getNumberSign(-5)); // Outputs "Negative"
+Checking if a value is a valid email address:
+javascript
+Copy code
+function isValidEmailAddress(email) {
+  // Regular expression to validate email address
+  let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+console.log(isValidEmailAddress("example@email.com")); // Outputs true
+Checking if a value is a number:
+javascript
+Copy code
+function isNumber(value) {
+  if (typeof value === "number" && !isNaN(value)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isNumber(42)); // Outputs true
+Checking if a value is a valid URL:
+javascript
+Copy code
+function isValidUrl(url) {
+  // Regular expression to validate URL
+  let urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;
+  return urlRegex.test(url);
+}
+
+console.log(isValidUrl("https://www.example.com")); // Outputs true
+Checking if a value is a palindrome (reads the same backwards and forwards):
+javascript
+Copy code
+function isPalindrome(str) {
+  let cleanStr = str.toLowerCase().replace(/\s+/g, ""); // Convert to lowercase and remove spaces
+  let reversedStr = cleanStr.split("").reverse().join(""); // Reverse the string
+  return cleanStr === reversedStr;
+}
+
+console.log(isPalindrome("racecar")); // Outputs true
+Checking if a value is an object:
+javascript
+Copy code
+function isObject(value) {
+  return typeof value === "object" && value !== null;
+}
+
+console.log(isObject({ key: "value" })); // Outputs true
+These are just some examples of conditions that can be implemented using JavaScript functions. You can create your own custom functions to suit your specific needs and requirements.
+
+
+
+
+gadeelaajaykumar
+Write 10 different parameter passing techniques in function 
+Sure! Here are 10 different parameter passing techniques in JavaScript functions:
+
+Positional Parameters: The most common way to pass parameters to a function is by specifying them in the function call based on their position.
+javascript
+Copy code
+function greet(firstName, lastName) {
+  console.log(`Hello, ${firstName} ${lastName}!`);
+}
+
+greet("John", "Doe"); // Outputs "Hello, John Doe!"
+Default Parameters: You can assign default values to parameters in the function declaration, which will be used if the corresponding argument is not provided.
+javascript
+Copy code
+function greet(firstName, lastName = "Doe") {
+  console.log(`Hello, ${firstName} ${lastName}!`);
+}
+
+greet("John"); // Outputs "Hello, John Doe!"
+Rest Parameters: You can use the rest parameter syntax (...) to pass an arbitrary number of arguments as an array.
+javascript
+Copy code
+function sum(...numbers) {
+  let total = 0;
+  for (let number of numbers) {
+    total += number;
+  }
+  return total;
+}
+
+console.log(sum(1, 2, 3, 4, 5)); // Outputs 15
+Named Parameters: You can pass parameters as an object with named properties, and then destructure them within the function.
+javascript
+Copy code
+function greet({ firstName, lastName }) {
+  console.log(`Hello, ${firstName} ${lastName}!`);
+}
+
+greet({ firstName: "John", lastName: "Doe" }); // Outputs "Hello, John Doe!"
+Arguments Object: The arguments object is a built-in object available within a function that represents the arguments passed to the function, similar to an array.
+javascript
+Copy code
+function greet(firstName, lastName) {
+  console.log(`Hello, ${arguments[0]} ${arguments[1]}!`);
+}
+
+greet("John", "Doe"); // Outputs "Hello, John Doe!"
+Spread Syntax: You can use the spread syntax (...) to pass the elements of an array or an object as separate arguments to a function.
+javascript
+Copy code
+function greet(firstName, lastName) {
+  console.log(`Hello, ${firstName} ${lastName}!`);
+}
+
+let name = ["John", "Doe"];
+greet(...name); // Outputs "Hello, John Doe!"
+Call Method: You can use the call() method to invoke a function with a specified this value and a list of arguments.
+javascript
+Copy code
+function greet(firstName, lastName) {
+  console.log(`Hello, ${firstName} ${lastName}!`);
+}
+
+greet.call(null, "John", "Doe"); // Outputs "Hello, John Doe!"
+Apply Method: Similar to call(), you can use the apply() method to invoke a function with a specified this value and an array of arguments.
+javascript
+Copy code
+function greet(firstName, lastName) {
+  console.log(`Hello, ${firstName} ${lastName}!`);
+}
+
+greet.apply(null, ["John", "Doe"]); // Outputs "Hello, John Doe!"
+Bind Method: The bind() method allows you to create a new function with a specific this value and a list of arguments, which can be invoked later.
+javascript
+Copy code
+function greet(firstName, lastName) {
+  console.log(`Hello, ${firstName} ${lastName}!`);
+}
+
+let greetJohnDoe = greet.bind(null, "John", "Doe");
+greetJohnDoe(); // Outputs "Hello, John Doe!"
+Arrow Functions: Arrow functions are a concise way to define functions in JavaScript, and they automatically inherit the this value from
+
+
+
+gadeelaajaykumar
+
+5 / 5
+
+Write 10 condition of js code only and  reusing function 
+Sure! Here are 10 different conditions that can be used in JavaScript code, along with examples of reusing functions:
+
+If Statement:
+javascript
+Copy code
+if (condition) {
+  // code to be executed if the condition is true
+} else {
+  // code to be executed if the condition is false
+}
+Example of reusing function:
+
+javascript
+Copy code
+function greet(person) {
+  if (person === "John") {
+    return "Hello, John!";
+  } else {
+    return "Hello, stranger!";
+  }
+}
+
+console.log(greet("John")); // Outputs "Hello, John!"
+console.log(greet("Alice")); // Outputs "Hello, stranger!"
+Switch Statement:
+javascript
+Copy code
+switch (expression) {
+  case value1:
+    // code to be executed if expression equals value1
+    break;
+  case value2:
+    // code to be executed if expression equals value2
+    break;
+  default:
+    // code to be executed if expression does not match any case
+    break;
+}
+Example of reusing function:
+
+javascript
+Copy code
+function getDayOfWeek(day) {
+  switch (day) {
+    case 0:
+      return "Sunday";
+    case 1:
+      return "Monday";
+    case 2:
+      return "Tuesday";
+    case 3:
+      return "Wednesday";
+    case 4:
+      return "Thursday";
+    case 5:
+      return "Friday";
+    case 6:
+      return "Saturday";
+    default:
+      return "Invalid day";
+  }
+}
+
+console.log(getDayOfWeek(0)); // Outputs "Sunday"
+console.log(getDayOfWeek(3)); // Outputs "Wednesday"
+console.log(getDayOfWeek(8)); // Outputs "Invalid day"
+Ternary Operator:
+javascript
+Copy code
+condition ? expressionIfTrue : expressionIfFalse;
+Example of reusing function:
+
+javascript
+Copy code
+function getDiscountedPrice(price, discountPercentage) {
+  return price - (price * (discountPercentage / 100));
+}
+
+let price = 100;
+let discountPercentage = 20;
+let discountedPrice = getDiscountedPrice(price, discountPercentage);
+
+console.log(`The discounted price is: ${discountedPrice}`); // Outputs "The discounted price is: 80"
+Nullish Coalescing Operator:
+javascript
+Copy code
+value1 ?? value2;
+Example of reusing function:
+
+javascript
+Copy code
+function getFullName(firstName, lastName) {
+  return firstName ?? "Unknown" + " " + lastName ?? "Unknown";
+}
+
+console.log(getFullName("John", "Doe")); // Outputs "John Doe"
+console.log(getFullName(null, "Doe")); // Outputs "Unknown Doe"
+console.log(getFullName("John", null)); // Outputs "John Unknown"
+Logical AND Operator:
+javascript
+Copy code
+value1 && value2;
+Example of reusing function:
+
+javascript
+Copy code
+function isAdult(age) {
+  return age >= 18 && "Yes" || "No";
+}
+
+console.log(isAdult(20)); // Outputs "Yes"
+console.log(isAdult(15)); // Outputs "No"
+Logical OR Operator:
+javascript
+Copy code
+value1 || value2;
+Example of reusing function:
+
+javascript
+Copy code
+function greet(name) {
+  return "Hello, " + (name || "stranger") + "!";
+}
+
+console.log(greet("John")); // Outputs "Hello, John!"
+console.log(greet("")); // Outputs "Hello, stranger!"
+For Loop:
+javascript
+Copy code
+for (initialization; condition; increment/decrement) {
+  // code to be executed
+}
+Example of reusing function:
+
+javascript
+Copy code
+
+
+
+gadeelaajaykumar
+Arrow Functions: Arrow functions are a concise way to define functions in JavaScript, and they automatically inherit the this value from
+the surrounding context.
+
+Example of reusing function:
+
+javascript
+Copy code
+const multiply = (a, b) => a * b;
+
+console.log(multiply(5, 6)); // Outputs 30
+console.log(multiply(3, 4)); // Outputs 12
+Spread Operator:
+The spread operator allows an array or object to be expanded into individual elements or properties. This can be useful for passing multiple arguments to a function or copying properties from one object to another.
+Example of reusing function:
+
+javascript
+Copy code
+function sum(a, b, c) {
+  return a + b + c;
+}
+
+const numbers = [1, 2, 3];
+
+console.log(sum(...numbers)); // Outputs 6
+Rest Parameters:
+The rest parameter allows a function to accept an indefinite number of arguments as an array. This can be useful for handling variable-length argument lists.
+Example of reusing function:
+
+javascript
+Copy code
+function printArgs(...args) {
+  console.log(args);
+}
+
+printArgs(1, 2, 3); // Outputs [1, 2, 3]
+printArgs("a", "b", "c"); // Outputs ["a", "b", "c"]
+These are just some of the many conditions and techniques that can be used in JavaScript code to reuse functions and make your code more efficient and modular.
+
+
+
+
+
+Regenerate response
